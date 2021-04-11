@@ -250,6 +250,7 @@ a.anchor {
   position: absolute;
   bottom: 2rem;
   right: 50%;
+  transform: translateX(50%);
   font-size: 3rem;
   color: white;
 }

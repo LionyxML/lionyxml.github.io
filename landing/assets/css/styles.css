@@ -12,6 +12,7 @@
   --cor-primaria-mais-escuro: #B53471;
   --cor-branco: #FCF8F8;
   --cor-cinza: #777;
+  --cor-cabecalho: #fa93b1;
 
   /* Fonte e tipografia */
   --fonte-corpo: 'Kumbh Sans', sans-serif;
@@ -48,7 +49,8 @@ body {
   font-size: var(--fonte-normal);
   font-weight: 500;
 
-  background: url("../img/bg.png");
+  background: url("../img/bg.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 h1,p,ul {
@@ -88,11 +90,11 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixo);
-  /* background-color: var(--cor-primaria); */
   transition: box-shadow 0.5s;
 }
 
 .cor-escura {
+  background-color: var(--cor-cabecalho);
   box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
 }
 
@@ -109,7 +111,7 @@ img {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 30%;
+    width: 20ch;
     height: 100%;
     padding: 3.5rem 1.5rem 0;
     background: rgba(0, 0, 0, 0.7);
@@ -247,8 +249,7 @@ a.anchor {
 .seta {
   position: absolute;
   bottom: 2rem;
-  right: 20%;
-  transform: translateX(100%);
+  right: 50%;
   font-size: 3rem;
   color: white;
   opacity: 1;

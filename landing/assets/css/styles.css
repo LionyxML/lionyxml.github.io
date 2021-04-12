@@ -48,12 +48,7 @@ body {
   font-size: var(--fonte-normal);
   font-weight: 500;
 
-  /* background: url("../img/2.jpg") no-repeat;
-  background-repeat: repeat-x;
-  background-attachment: fixed;
-  background-position: left top; */
-
-
+  background: url("../img/bg.png");
 }
 
 h1,p,ul {
@@ -93,7 +88,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixo);
-  background-color: var(--cor-primaria);
+  /* background-color: var(--cor-primaria); */
   transition: box-shadow 0.5s;
 }
 
@@ -194,7 +189,7 @@ a.anchor {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: var(--cor-primaria);
+  /* background-color: var(--cor-primaria); */
 }
 
 
@@ -234,7 +229,10 @@ a.anchor {
 }
 
 .home-botao {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
   background-color: var(--cor-primaria-escuro);
   color: var(--cor-branca);
   padding: 1.125rem 2rem;
@@ -249,10 +247,18 @@ a.anchor {
 .seta {
   position: absolute;
   bottom: 2rem;
-  right: 50%;
-  transform: translateX(50%);
+  right: 20%;
+  transform: translateX(100%);
   font-size: 3rem;
   color: white;
+  opacity: 1;
+  transition: color .5s, opacity .5s, visibility .5s, transform .5s;
+  visibility: visible;
+}
+
+.seta.no-show {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .seta a {
@@ -302,7 +308,7 @@ a.anchor {
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background-color: var(--cor-primaria);
+  /* background-color: var(--cor-primaria); */
 }
 
 .sabores-titulo {
@@ -374,7 +380,7 @@ a.anchor {
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background-color: var(--cor-primaria);
+  /* background-color: var(--cor-primaria); */
 }
 
 .depoimentos-titulo {
@@ -478,7 +484,7 @@ a.anchor {
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background-color: var(--cor-primaria);
+  /* background-color: var(--cor-primaria); */
 }
 
 .contatos-titulo {

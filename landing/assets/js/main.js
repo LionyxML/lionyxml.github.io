@@ -32,6 +32,7 @@ function move(e) {
 
 // BOTAO PARA VOLTAR AO TOPO
 var topo = document.getElementsByClassName('seta-topo')[0];
+var proximo = document.getElementsByClassName('seta')[0];
 var cabecalho = document.getElementsByClassName('cabecalho')[0];
 
 window.onscroll = function() {scrollFunction()};
@@ -39,10 +40,12 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     topo.classList.add('show');
+    proximo.classList.add('no-show');
     cabecalho.classList.add('cor-escura');
 
   } else {
     topo.classList.remove('show');
+    proximo.classList.remove('no-show');
     cabecalho.classList.remove('cor-escura');
   }
 }

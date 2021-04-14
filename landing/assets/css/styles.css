@@ -69,6 +69,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-color: #555;
+
+  min-width: 280px;
+
 }
 
 h1,p,ul {
@@ -138,7 +141,24 @@ img {
   }
 
   a.anchor {
-      top: calc(-1 * (var(--altura-h) + 0.5rem )) !important;
+      top: calc(-1 * (var(--altura-h) - 1rem)) !important;
+  }
+
+  .logo i{
+    display: none;
+  }
+
+  .contatos-container {
+    width: 80%;
+  }
+
+  .contatos-texto {
+    margin: 0 auto !important;
+    align-items: stretch !important;
+  }
+
+  .contatos-mapa iframe{
+    width: 80% !important;
   }
 
 }
@@ -236,6 +256,10 @@ a.anchor {
 
 .home-conteudo {
   color: var(--cor-branco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .home-titulo {
@@ -267,7 +291,7 @@ a.anchor {
 .seta {
   position: absolute;
   bottom: 2rem;
-  right: 50%;
+  right: 0.8rem;
   font-size: 3rem;
   color: white;
   opacity: 1;
@@ -337,12 +361,12 @@ a.anchor {
   color: var(--cor-branco);
   font-size: var(--fonte-grande);
   margin: 0;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   padding: 0;
 }
 
 .sabores-container {
-  min-height: calc(70vh - var(--altura-h));
+  min-height: calc(70vh - var(--fonte-grande));
   width: 80%;
   display: flex;
   justify-content: space-around;
@@ -354,7 +378,7 @@ a.anchor {
   margin: 0.5rem;
   margin-bottom: 2rem;
   padding: 0;
-  height: 30rem;
+  height: 28rem;
   width: 15rem;
   background-color: white;
   transition: all 500ms;
@@ -409,6 +433,7 @@ a.anchor {
   color: var(--cor-branco);
   font-size: var(--fonte-grande);
   margin: 0;
+  margin-top: 2rem;
   padding: 0;
 }
 
@@ -500,6 +525,8 @@ a.anchor {
 .contatos {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
@@ -513,22 +540,29 @@ a.anchor {
   color: var(--cor-branco);
   font-size: var(--fonte-grande);
   margin: 0;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
   padding: 0;
 }
 
 .contatos-container {
-  height: calc(70vh - var(--altura-h));
+  height: calc(80vh - var(--fonte-grande));
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .contatos-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
   margin-left: 2rem;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: var(--fonte-normal);
   color: var(--cor-branco);
   line-height: 3rem;
 }
@@ -553,10 +587,15 @@ a.anchor {
 
 .contatos-mapa {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contatos-mapa iframe{
   border-radius: 3rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  height: 40vh;
+  width: auto;
+  margin-bottom: 2rem;
 }
 
 
@@ -604,7 +643,7 @@ a.anchor {
   }
 
   .anchor {
-        top: calc(-1 * (var(--altura-h) + 2rem)) !important;
+        top: calc(-1 * (var(--altura-h))) !important;
   }
 
 }
@@ -630,7 +669,11 @@ a.anchor {
   }
 
   .anchor {
-        top: calc(-1 * (var(--altura-h) + 1.5rem)) !important;
+        top: calc(-1 * (var(--altura-h) )) !important;
+  }
+
+  .sabores-titulo {
+    margin-bottom: 0rem;
   }
 
 }

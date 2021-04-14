@@ -31,6 +31,20 @@
 }
 
 
+::-webkit-scrollbar {
+  width: .4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor-primaria);
+  opacity: 10%;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10rem;
+  background: var(--cor-primaria-escuro);
+}
+
 /* Configurações de Base */
 
 html {

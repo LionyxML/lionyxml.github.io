@@ -1,3 +1,7 @@
+:root {
+  --clr-green: #489e93;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +18,21 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #555;
-
+  background-color: var(--clr-green);
   font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: .75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10rem;
+  background: var(--clr-green);
 }
 
 .container {
@@ -30,9 +46,7 @@ body {
   max-width: 40rem;
 }
 
-.welcome {
-
-}
+.welcome {}
 
 .text {
   margin: 2rem;
@@ -44,7 +58,7 @@ body {
 }
 
 .welcome img {
-  border-radius: 100% ;
+  border-radius: 100%;
   box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
 }
 
@@ -58,9 +72,11 @@ body {
 .btn {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
   min-width: 30ch;
   max-width: 30ch;
-  align-items: center;
   margin: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -72,9 +88,29 @@ body {
   color: white;
   border-radius: 35rem;
   transition: all 0.4s;
+
 }
 
 .btn:hover {
-  background: #489e93;
+  background: var(--clr-green);
   transform: scale(1.1) translateY(-0.3rem);
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+
+  .btn {
+    min-width: 0;
+    max-width: none;
+    width: 80vw;
+    margin: 0.5rem;
+    padding: 0;
+    height: auto;
+
+  }
+
+  .text {
+    min-width: 0;
+    max-width: none;
+  }
+
 }

@@ -67,3 +67,29 @@ let seta = document.querySelector(".seta");
 let hover = gsap.to(seta, {scale: 1.2, color: "blue", duration: .5, paused: true, ease: "InOut"});
 seta.addEventListener("mouseenter", () => hover.play());
 seta.addEventListener("mouseleave", () => hover.reverse());
+
+
+
+// MODAL
+var form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  var isValid = true;
+
+  for(var i = 0; i < this.elements.length; i++) {
+    var item = this.elements[i];
+
+    if(item.type !== "submit"){
+      if(item.value == "") {
+        item.classList.add("erro");
+        isValid = false;
+      } else {
+        item.classList.remove("erro");
+      }
+    }
+  }
+
+console.log(isValid);
+
+});

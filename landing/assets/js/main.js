@@ -6,12 +6,12 @@ const botFech = document.getElementsByClassName('nav-fechar')[0];
 
 // MOSTRAR
 botMenu.addEventListener('click', () => {
-  navMenu.classList.toggle('mostrar')
+  navMenu.classList.toggle('mostrar');
 });
 
 // ESCONDER
 botFech.addEventListener('click', () => {
-  navMenu.classList.toggle('mostrar')
+  navMenu.classList.toggle('mostrar');
 });
 
 
@@ -21,11 +21,10 @@ document.addEventListener('mousemove', move);
 function move(e) {
   this.querySelectorAll('.move').forEach(layer => {
     const speed = layer.getAttribute('data-speed');
-    const x = (window.innerWidth - e.pageX*speed) / 120;
-    const y = (window.innerHeight - e.pageY*speed) / 120;
+    const x = (window.innerWidth - e.pageX * speed) / 120;
+    const y = (window.innerHeight - e.pageY * speed) / 120;
 
     layer.style.transform = `translate(${x}px) translateY(${y}px)`;
-
   });
 }
 

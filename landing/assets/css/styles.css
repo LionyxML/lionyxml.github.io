@@ -68,7 +68,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #555;
+  background-color: var(--cor-cabecalho);
 
   min-width: 280px;
 

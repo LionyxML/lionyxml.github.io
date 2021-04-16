@@ -93,3 +93,15 @@ form.addEventListener("submit", function(event) {
 console.log(isValid);
 
 });
+
+const modalAbrir = document.getElementsByClassName('home-botao')[0];
+const modalFechar = document.getElementsByClassName('modal-fechar')[0];
+const modalPedido = document.getElementsByClassName('modal-pedido')[0];
+
+modalAbrir.addEventListener('click', function() {
+  modalPedido.style = "display: block";
+});
+
+modalFechar.addEventListener('click', function() {
+  modalPedido.style = "display: none";
+});

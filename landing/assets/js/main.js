@@ -99,9 +99,11 @@ const modalFechar = document.getElementsByClassName('modal-fechar')[0];
 const modalPedido = document.getElementsByClassName('modal-pedido')[0];
 
 modalAbrir.addEventListener('click', function() {
-  modalPedido.style = "display: block";
+  // modalPedido.style = "display: block";
+  modalPedido.classList.toggle('modal-mostrar');
 });
 
 modalFechar.addEventListener('click', function() {
-  modalPedido.style = "display: none";
+  // modalPedido.style = "display: none";
+  modalPedido.classList.toggle('modal-mostrar');
 });

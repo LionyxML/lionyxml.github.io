@@ -183,11 +183,11 @@
         <form action="#" method="post">
       <div class="row">
         <label class="modal-label" for="nome">Nome</label>
-        <input class="modal-nome" type="text" id="nome" name="nome" required value="Seu nome aqui">
+        <input class="modal-nome" type="text" id="nome" name="nome" required value="">
       </div>
       <div class="row">
         <label class="modal-label" for="tel">Telefone</label>
-        <input class="modal-nome" type="tel" id="tel" name="tel" required value="(xx) xxxxx-xxxx">
+        <input class="modal-nome" type="tel" id="tel" name="tel" required value="">
       </div>
       <hr>
       <div class="row">
@@ -211,10 +211,14 @@
         <textarea class="modal-qtd" id="obs" name="obs"></textarea>
       </div>
       <hr>
+
       <div class="row">
         <button type="submit">Enviar Pedido</button>
       </div>
     </form>
+    <div class="row">
+      <div class="flash"></div>
+    </div>
     </div>
   </div>
 

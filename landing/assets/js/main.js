@@ -72,25 +72,34 @@ seta.addEventListener("mouseleave", () => hover.reverse());
 
 // MODAL
 var form = document.querySelector("form");
+var flash = document.getElementsByClassName("flash")[0];
+var conteudo = document.getElementsByClassName("modal-conteudo")[0];
 
 form.addEventListener("submit", function(event) {
   event.preventDefault();
-  var isValid = true;
+  var quantidade = 0;
+  var nome, tel;
+
 
   for(var i = 0; i < this.elements.length; i++) {
     var item = this.elements[i];
-
-    if(item.type !== "submit"){
-      if(item.value == "") {
-        item.classList.add("erro");
-        isValid = false;
-      } else {
-        item.classList.remove("erro");
-      }
+    if(item.type == "number"){
+      quantidade += parseInt(item.value);
     }
+    if (item.type == "text") { nome = item.value };
+    if (item.type == "tel") { tel = item.value };
   }
 
-console.log(isValid);
+  if (quantidade == 0) {
+    flash.innerHTML = "Ei! Selecione pelo menos uma rosquinha!";
+    flash.classList.add("flash-mostra");
+  } else {
+    form.innerHTML = "";
+    flash.classList.add("flash-mostra");
+    flash.innerHTML = "<p>Muuuito Obrigado, " + nome + "!</p><hr><p>Seu pedido foi enviado!<hr><p>Entraremos em contato no telefone " + tel + " para confirmar a entrega das suas " + quantidade + " rosquinhas!</p>";
+  }
+
+
 
 });
 

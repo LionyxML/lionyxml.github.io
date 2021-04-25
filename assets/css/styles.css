@@ -19,7 +19,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-color: var(--clr-green);
+  color: white;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
 }
 
 ::-webkit-scrollbar {
@@ -46,16 +48,37 @@ body {
   max-width: 40rem;
 }
 
-.welcome {}
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.row i {
+  margin: 0.8rem;
+  transition: all 0.4s;
+}
+
+.row i:hover {
+  transform: scale(2);
+}
 
 .text {
   margin: 2rem;
   text-align: center;
   min-width: 30ch;
   max-width: 30ch;
-  color: white;
-  line-height: 1.4rem;
+  line-height: 1.8rem;
 }
+
 
 .welcome img {
   border-radius: 100%;
@@ -81,11 +104,9 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   line-height: 2rem;
-  font-size: 1.3rem;
   height: 2.4rem;
   background: rgb(72, 158, 147, 0.6);
   box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.4);
-  color: white;
   border-radius: 35rem;
   transition: all 0.4s;
 

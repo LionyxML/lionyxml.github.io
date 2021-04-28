@@ -96,7 +96,7 @@ form.addEventListener("submit", function(event) {
   } else {
     form.innerHTML = "";
     flash.classList.add("flash-mostra");
-    flash.innerHTML = "<p>Muuuito Obrigado, " + nome + "!</p><hr><p>Seu pedido foi enviado!<hr><p>Entraremos em contato no telefone " + tel + " para confirmar a entrega das suas " + quantidade + " rosquinhas!</p>";
+    flash.innerHTML = "<p>Muuuito Obrigado, <h2> " + nome + "</h2></p><hr><p>Seu pedido foi enviado!<hr><p>Entraremos em contato no telefone <u>" + tel + "</u> para confirmar a entrega das suas <strong>" + quantidade + "</strong> rosquinhas!</p>";
   }
 
 
@@ -106,13 +106,16 @@ form.addEventListener("submit", function(event) {
 const modalAbrir = document.getElementsByClassName('home-botao')[0];
 const modalFechar = document.getElementsByClassName('modal-fechar')[0];
 const modalPedido = document.getElementsByClassName('modal-pedido')[0];
+const modalLogo = document.getElementsByClassName('modal-logo')[0];
 
 modalAbrir.addEventListener('click', function() {
-  // modalPedido.style = "display: block";
+
   modalPedido.classList.toggle('modal-mostrar');
+
 });
 
 modalFechar.addEventListener('click', function() {
-  // modalPedido.style = "display: none";
+
   modalPedido.classList.toggle('modal-mostrar');
+
 });

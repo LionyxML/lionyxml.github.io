@@ -606,19 +606,21 @@ a.anchor {
 .modal-pedido {
   display: block;
   position: fixed;
-  z-index: 999;
+  z-index: -1;
   padding-top: 100px;
-  top: -100%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgb(0,0,0, 0.4);
   transition: .5s ease-in-out;
+  opacity: 0;
 }
 
 .modal-mostrar {
-  left: 0;
-  top: 0;
+  z-index: 999;
+  opacity: 100%;
 }
 
 .modal-conteudo {
@@ -626,7 +628,9 @@ a.anchor {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #777;
+  border: 2px solid var(--cor-primaria-escuro);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, .7);
   width: 300px;
   color: black;
   transition: all 200ms;
@@ -640,6 +644,27 @@ a.anchor {
   color: var(--cor-primaria-escuro);
 }
 
+.modal-logo {
+  position: absolute;
+  top: 0;
+  transform: translateY(-70%);
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  border: solid 3px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, .7);
+}
+
+.modal-logo img {
+  height: 60px;
+}
+
+
+
 .modal-fechar {
   right: 0.4rem;
   top: 0.4rem;
@@ -648,13 +673,13 @@ a.anchor {
   text-align: center;
   width: 2ch;
   border-radius: 10rem;
-  border: solid var(--cor-primaria-escuro) 2px;
+  // border: solid var(--cor-primaria-escuro) 2px;
   cursor: pointer;
   transition: ease .2s;
 }
 
 .modal-fechar:hover {
-  transform: scale(1.4);
+  transform: scale(2);
 }
 
 
@@ -664,7 +689,7 @@ a.anchor {
   text-align: center;
   line-height: 1.2rem;
   color: var(--cor-primaria-escuro);
-  border: solid var(--cor-primaria-escuro) 1px;
+  border: solid var(--cor-primaria-escuro) 1.5px;
   border-radius: 10px;
 }
 
@@ -701,7 +726,7 @@ a.anchor {
 
 .modal-conteudo textarea {
   width: 100%;
-  height: 10ch;
+  height: 8ch;
 }
 
 .modal-label {
@@ -737,6 +762,8 @@ a.anchor {
   text-align: center;
   background: var(--cor-primaria-escuro);
   color: var(--cor-branco);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .flash-mostra {

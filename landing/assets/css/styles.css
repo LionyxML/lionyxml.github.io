@@ -756,7 +756,7 @@ a.anchor {
 }
 
 .flash {
-  display: none;
+  opacity: 0;
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
@@ -764,10 +764,12 @@ a.anchor {
   color: var(--cor-branco);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;  
 }
 
 .flash-mostra {
   display: block;
+  opacity: 100;
 }
 
 

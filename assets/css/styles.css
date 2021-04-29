@@ -199,6 +199,16 @@ body {
   text-align: center;
 }
 
+.barra{
+  text-align: center;
+  margin-top: 1rem;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
 
 .modal-lista {
   font-size: 1rem;
@@ -265,6 +275,7 @@ li:hover {
   box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.4);
   border-radius: 35rem;
   transition: all 0.5s;
+  width: 15ch;
 
 }
 

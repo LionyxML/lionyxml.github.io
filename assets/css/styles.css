@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -109,6 +110,7 @@ body {
   box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.4);
   border-radius: 35rem;
   transition: all 0.4s;
+  cursor: pointer;
 
 }
 
@@ -134,4 +136,136 @@ body {
     max-width: none;
   }
 
+}
+
+
+/* Modais */
+.modal-api {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.666);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .5s ease-in-out;
+  /* background-color: rgba(72, 158, 157, 0.8); */
+}
+
+.modal-mostrar {
+  z-index: 100;
+  opacity: 100;
+}
+
+.modal-conteudo {
+  margin: 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  background: rgba(72, 158, 157);
+  border-radius: 20px;
+  max-width: 600px;
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.modal-fechar:hover {
+  transform: scale(1.5) rotate(360deg);
+}
+
+
+.modal-descricao {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+
+.modal-lista {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-width: 22ch;
+}
+
+.modal-lista i {
+  padding-right: 0.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  transition: all .2s ease-in-out;
+}
+
+li:hover {
+  transform: translateX(10%);
+}
+
+.modal-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal-col {
+
+}
+
+
+.modal-thumb {
+  text-align: center;
+}
+
+.modal-thumb img {
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px black;
+  transition: all .5s ease-in-out;
+}
+
+.modal-thumb img:hover {
+  transform: scale(1.1);
+}
+
+
+.modal-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 2rem;
+  height: 2.4rem;
+  background: rgb(72, 158, 147, 0.6);
+  box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.4);
+  border-radius: 35rem;
+  transition: all 0.5s;
+
+}
+
+.modal-link:hover {
+  background: var(--clr-green);
+  transform: scale(1.1) translateY(-0.3rem);
 }

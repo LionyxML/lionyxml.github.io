@@ -140,7 +140,10 @@ body {
 
 
 /* Modais */
-.modal-api {
+.modal-api,
+.modal-land,
+.modal-micro,
+.modal-dash {
   position: absolute;
   top: 0;
   height: 100%;
@@ -156,8 +159,8 @@ body {
 }
 
 .modal-mostrar {
-  z-index: 100;
   opacity: 100%;
+  z-index: 100;
 }
 
 .modal-conteudo {

@@ -35,10 +35,9 @@
     </div>
     <div class="list">
       <div class="btn" id="btn-api">Consulta em API</div>
-      <div class="btn"><a href="landing/index.html">Landing Page</a></div>
-      <div class="btn"><a href="http://ec2-18-191-36-198.us-east-2.compute.amazonaws.com:8080">
-          Microblog</a></div>
-      <div class="btn"><a href="http://ec2-18-191-36-198.us-east-2.compute.amazonaws.com:1880/ui/#!/0?socketid=Le-T0jumecnDdDWFAADa">
+      <div class="btn" id="btn-land">Landing Page</div>
+      <div class="btn" id="btn-micro">Microblog</div>
+      <div class="btn" id="btn-dash">
           Dashboards</a></div>
     </div>
   </div>
@@ -50,11 +49,11 @@
   <!-- Consulta API -->
   <div class="modal-api">
     <div class="modal-conteudo">
-      <div class="modal-fechar">&times</div>
+      <div class="modal-fechar" id="fechar-api">&times</div>
       <div class="modal-row">
         <div class="modal-descricao">
         <i class='bx bxs-category-alt'></i>
-        Projeto de frontend para consulta ao Star Wars API, buscando os personagems por nome.
+        Projeto de frontend para consulta ao Star Wars API, buscando os personagems por nome
         <i class='bx bxs-category-alt'></i>
         </div>
       </div>
@@ -66,7 +65,8 @@
               <li><i class='bx bxs-check-circle'></i>CSS3</li>
               <li><i class='bx bxs-check-circle'></i>JS</li>
               <li><i class='bx bxs-check-circle'></i>Ajax</li>
-              <li><i class='bx bxs-check-circle'></i>Tradução por dicionário</li>
+              <li><i class='bx bxs-check-circle'></i>Responsivo</li>
+              <li><i class='bx bxs-check-circle'></i>Tradução</li>
               <li><i class='bx bxs-check-circle'></i>3 modos de saída</li>
             </ul>
           </div>
@@ -81,6 +81,109 @@
     </div>
   </div>
 
+
+  <!-- Landing Produto -->
+  <div class="modal-land">
+    <div class="modal-conteudo">
+      <div class="modal-fechar" id="fechar-land">&times</div>
+      <div class="modal-row">
+        <div class="modal-descricao">
+        <i class='bx bxs-category-alt'></i>
+          Landing page para exposição de empresa/produto em única página
+        <i class='bx bxs-category-alt'></i>
+        </div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-col">
+          <div class="modal-lista">
+            <ul>
+              <li><i class='bx bxs-check-circle'></i>HTML5</li>
+              <li><i class='bx bxs-check-circle'></i>CSS3</li>
+              <li><i class='bx bxs-check-circle'></i>JS</li>
+              <li><i class='bx bxs-check-circle'></i>Zenscroll</li>
+              <li><i class='bx bxs-check-circle'></i>GSAP</li>
+              <li><i class='bx bxs-check-circle'></i>Responsivo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-thumb modal-col">
+          <img src="./assets/img/land.png" alt="" height="180px" width="180px">
+        </div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-link"><a href="landing/index.html">Acesse!</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Microblog -->
+  <div class="modal-micro">
+    <div class="modal-conteudo">
+      <div class="modal-fechar" id="fechar-micro">&times</div>
+      <div class="modal-row">
+        <div class="modal-descricao">
+        <i class='bx bxs-category-alt'></i>
+          Projeto Backend+Frontend de um Microblog (twitter clone)
+        <i class='bx bxs-category-alt'></i>
+        </div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-col">
+          <div class="modal-lista">
+            <ul>
+              <li><i class='bx bxs-check-circle'></i>HTML5, CSS3, JS</li>
+              <li><i class='bx bxs-check-circle'></i>Bootstrap</li>
+              <li><i class='bx bxs-check-circle'></i>SQLAlchemy ORM</li>
+              <li><i class='bx bxs-check-circle'></i>SQLite</li>
+              <li><i class='bx bxs-check-circle'></i>Python3 / Flask</li>
+              <li><i class='bx bxs-check-circle'></i>Babel</li>
+              <li><i class='bx bxs-check-circle'></i>Azure Translator</li>
+              <li><i class='bx bxs-check-circle'></i>Testes automatizados</li>
+              <li><i class='bx bxs-check-circle'></i>AWS EC2 Cloud</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-thumb modal-col">
+          <img src="./assets/img/micro.png" alt="" height="180px" width="180px">
+        </div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-link"><a href="http://ec2-18-191-36-198.us-east-2.compute.amazonaws.com:8080">Acesse!</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="modal-dash">
+    <div class="modal-conteudo">
+      <div class="modal-fechar" id="fechar-dash">&times</div>
+      <div class="modal-row">
+        <div class="modal-descricao">
+        <i class='bx bxs-category-alt'></i>
+          Projeto de dashboards para equipamentos elétricos instalados: consumo de energia / dados meteorológicos
+        <i class='bx bxs-category-alt'></i>
+        </div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-col">
+          <div class="modal-lista">
+            <ul>
+              <li><i class='bx bxs-check-circle'></i>HTML5, CSS3, JS</li>
+              <li><i class='bx bxs-check-circle'></i>Node-Red</li>
+              <li><i class='bx bxs-check-circle'></i>APIs Múltiplas</li>
+              <li><i class='bx bxs-check-circle'></i>AWS EC2 Cloud</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-thumb modal-col">
+          <img src="./assets/img/dash.png" alt="" height="180px" width="180px">
+        </div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-link"><a href="http://ec2-18-191-36-198.us-east-2.compute.amazonaws.com:1880/ui/#!/0?socketid=Le-T0jumecnDdDWFAADa">Acesse!</a></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Plugin GSAP de Animação -->
   <script src="./assets/js/gsap.min.js"></script>

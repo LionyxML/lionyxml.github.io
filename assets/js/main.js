@@ -45,3 +45,15 @@ btnDash.addEventListener('click', function () {
 btnDashClose.addEventListener('click', function () {
   modalDash.classList.remove('modal-mostrar');
 });
+
+var modalPort = document.getElementsByClassName('modal-landprof')[0];
+var btnPort = document.getElementById('btn-landprof');
+var btnPortClose = document.getElementById('fechar-landprof');
+
+btnPort.addEventListener('click', function () {
+  modalPort.classList.toggle('modal-mostrar');
+});
+
+btnPortClose.addEventListener('click', function () {
+  modalPort.classList.remove('modal-mostrar');
+});

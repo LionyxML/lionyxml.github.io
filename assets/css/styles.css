@@ -14,19 +14,20 @@ a {
 }
 
 body {
-  background: url('https://images.pexels.com/photos/131683/pexels-photo-131683.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260') no-repeat center center fixed;
+  background: url("https://images.pexels.com/photos/131683/pexels-photo-131683.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-color: var(--clr-green);
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
 }
 
 ::-webkit-scrollbar {
-  width: .75rem;
+  width: 0.75rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -80,7 +81,6 @@ body {
   line-height: 1.8rem;
 }
 
-
 .welcome img {
   border-radius: 100%;
   box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
@@ -111,7 +111,6 @@ body {
   border-radius: 35rem;
   transition: all 0.4s;
   cursor: pointer;
-
 }
 
 .btn:hover {
@@ -120,7 +119,6 @@ body {
 }
 
 @media (min-width: 280px) and (max-width: 700px) {
-
   .btn {
     min-width: 0;
     max-width: none;
@@ -128,23 +126,21 @@ body {
     margin: 0.5rem;
     padding: 0;
     height: auto;
-
   }
 
   .text {
     min-width: 0;
     max-width: none;
   }
-
 }
-
 
 /* Modais */
 .modal-api,
 .modal-land,
 .modal-landprof,
 .modal-micro,
-.modal-dash {
+.modal-dash,
+.modal-qr {
   position: absolute;
   top: 0;
   height: 100%;
@@ -156,7 +152,7 @@ body {
   opacity: 0;
   visibility: hidden;
   z-index: 100;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   /* background-color: rgba(72, 158, 157, 0.8); */
 }
 
@@ -184,13 +180,12 @@ body {
   top: 3px;
   right: 20px;
   cursor: pointer;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .modal-fechar:hover {
   transform: scale(1.5) rotate(360deg);
 }
-
 
 .modal-descricao {
   font-size: 1.3rem;
@@ -202,7 +197,7 @@ body {
   text-align: center;
 }
 
-.barra{
+.barra {
   text-align: center;
   margin-top: 1rem;
   content: "";
@@ -210,7 +205,6 @@ body {
   width: 100%;
   background-color: white;
 }
-
 
 .modal-lista {
   font-size: 1rem;
@@ -227,7 +221,7 @@ ul {
 }
 
 li {
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 li:hover {
@@ -242,9 +236,7 @@ li:hover {
 }
 
 .modal-col {
-
 }
-
 
 .modal-thumb {
   text-align: center;
@@ -254,13 +246,12 @@ li:hover {
   margin: 20px;
   border-radius: 10px;
   box-shadow: 3px 3px 10px black;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .modal-thumb img:hover {
   transform: scale(1.1);
 }
-
 
 .modal-link {
   display: flex;
@@ -278,7 +269,6 @@ li:hover {
   border-radius: 35rem;
   transition: all 0.5s;
   width: 15ch;
-
 }
 
 .modal-link:hover {

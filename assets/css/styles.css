@@ -1,5 +1,11 @@
 :root {
-  --clr-green: #489e93;
+  --charcoal: #274156;
+  --cerulean: #1c6e8c;
+  --wenge: #605856;
+  --white: #fbfcff;
+  --gray: #d0ccd0;
+
+  --transition-time: 0.4s;
 }
 
 * {
@@ -14,18 +20,15 @@ a {
 }
 
 body {
-  background: url("https://images.pexels.com/photos/7577910/pexels-photo-7577910.jpeg")
-    no-repeat center center fixed;
-  backdrop-filter: blur(3px);
-  /* background-blend-mode: darken; */
+  background: url("../img/bg.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: var(--clr-green);
-  color: white;
+  color: var(--white);
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
+  background-color: var(--cerulean);
 }
 
 ::-webkit-scrollbar {
@@ -33,12 +36,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0, 0.1);
+  background: var(--cerulean);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10rem;
-  background: var(--clr-green);
+  background: var(--cerulean);
 }
 
 .container {
@@ -68,7 +71,7 @@ body {
 
 .row i {
   margin: 0.8rem;
-  transition: all 0.4s;
+  transition: all var(--transition-time);
 }
 
 .row i:hover {
@@ -86,7 +89,7 @@ body {
 
 .welcome img {
   border-radius: 100%;
-  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 20px var(--white);
 }
 
 .list {
@@ -109,15 +112,18 @@ body {
   padding-right: 1rem;
   line-height: 2rem;
   height: 2.4rem;
-  background: rgb(72, 158, 147, 0.6);
-  box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.4);
+  background-color: var(--cerulean);
+  opacity: 0.8;
   border-radius: 35rem;
-  transition: all 0.4s;
+  border: 0.5px solid var(--white);
+  transition: all var(--transition-time);
   cursor: pointer;
 }
 
 .btn:hover {
-  background: var(--clr-green);
+  filter: brightness(140%);
+  box-shadow: 0px 2px 10px var(--white);
+  border: 0px;
   transform: scale(1.1) translateY(-0.3rem);
 }
 
@@ -137,7 +143,6 @@ body {
   }
 }
 
-/* Modais */
 .modal-blog,
 .modal-game,
 .modal-api,
@@ -153,18 +158,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.666);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   z-index: 100;
-  transition: all 0.5s ease-in-out;
-  /* background-color: rgba(72, 158, 157, 0.8); */
+  transition: all var(--transition-time) ease-in-out;
 }
 
 .modal-show {
   opacity: 100%;
   visibility: visible;
-  /* z-index: 100; */
 }
 
 .modal-content {
@@ -174,8 +177,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: white;
-  background: rgba(72, 158, 157, 0.9);
+  background-color: var(--cerulean);
+  border: 0.5px solid var(--white);
   border-radius: 20px;
   max-width: 600px;
 }
@@ -185,7 +188,7 @@ body {
   top: 3px;
   right: 20px;
   cursor: pointer;
-  transition: all 0.5s ease-in;
+  transition: all var(--transition-time) ease-in;
 }
 
 .modal-close:hover {
@@ -204,11 +207,12 @@ body {
 
 .bar {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   content: "";
   height: 1px;
   width: 100%;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .modal-list {
@@ -226,8 +230,8 @@ ul {
 }
 
 li {
-  transition: all 0.2s ease-in;
-  cursor: pointer;
+  transition: all calc(var(--transition-time) / 2) ease-in;
+  cursor: default;
 }
 
 li:hover {
@@ -246,13 +250,14 @@ li:hover {
 
 .modal-thumb {
   text-align: center;
+  border-radius: 10px;
 }
 
 .modal-thumb img {
   margin: 20px;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px black;
-  transition: all 0.5s ease-in;
+  box-shadow: 3px 3px 10px var(--white);
+  transition: all calc(var(--transition-time) / 2) ease-in;
 }
 
 .modal-thumb img:hover {
@@ -270,18 +275,24 @@ li:hover {
   padding-right: 1rem;
   line-height: 2rem;
   height: 2.4rem;
-  background: rgb(72, 158, 147, 0.6);
-  box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.4);
+  background-color: var(--cerulean);
+  border: 0.5px solid var(--white);
   border-radius: 35rem;
-  transition: all 0.5s;
+  transition: all var(--transition-time);
   width: 15ch;
 }
 
 .modal-link:hover {
-  background: var(--clr-green);
+  filter: brightness(140%);
+  box-shadow: 0px 2px 10px var(--white);
+  border: 0px;
   transform: scale(1.1) translateY(-0.3rem);
 }
 
 .hidden {
   display: none;
+}
+
+.space {
+  margin-bottom: 1rem;
 }

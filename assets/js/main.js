@@ -4,6 +4,7 @@ var btnApiClose = document.getElementById("close-api");
 
 btnApi.addEventListener("click", function () {
   modalApi.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnApiClose.addEventListener("click", function () {
@@ -16,6 +17,7 @@ var btnLanClose = document.getElementById("close-land");
 
 btnLan.addEventListener("click", function () {
   modalLan.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnLanClose.addEventListener("click", function () {
@@ -28,6 +30,7 @@ var btnQRClose = document.getElementById("close-qr");
 
 btnQR.addEventListener("click", function () {
   modalQR.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnQRClose.addEventListener("click", function () {
@@ -40,6 +43,7 @@ var btnMicClose = document.getElementById("close-micro");
 
 btnMic.addEventListener("click", function () {
   modalMic.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnMicClose.addEventListener("click", function () {
@@ -52,6 +56,7 @@ var btnDashClose = document.getElementById("close-dash");
 
 btnDash.addEventListener("click", function () {
   modalDash.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnDashClose.addEventListener("click", function () {
@@ -64,6 +69,7 @@ var btnPortClose = document.getElementById("close-landprof");
 
 btnPort.addEventListener("click", function () {
   modalPort.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnPortClose.addEventListener("click", function () {
@@ -76,6 +82,7 @@ var btnPortClose = document.getElementById("close-game");
 
 btnPort.addEventListener("click", function () {
   modalGame.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnPortClose.addEventListener("click", function () {
@@ -88,6 +95,7 @@ var btnPortClose = document.getElementById("close-blog");
 
 btnPort.addEventListener("click", function () {
   modalBlog.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 btnPortClose.addEventListener("click", function () {

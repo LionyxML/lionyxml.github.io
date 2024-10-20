@@ -29,6 +29,10 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
   background-color: var(--cerulean);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10vh;
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +45,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10rem;
-  background: var(--cerulean);
+  background: var(--charcoal);
 }
 
 .container {
@@ -50,7 +54,6 @@ body {
   align-items: center;
   flex-direction: column;
   width: 90%;
-  height: 100vh;
   margin: 0 auto;
   max-width: 40rem;
 }
@@ -141,6 +144,11 @@ body {
     min-width: 0;
     max-width: none;
   }
+
+  .modal-content {
+    position: absolute !important;
+    top: 0 !important;
+  }
 }
 
 .modal-blog,
@@ -163,6 +171,7 @@ body {
   visibility: hidden;
   z-index: 100;
   transition: all var(--transition-time) ease-in-out;
+  padding-top: 2rem;
 }
 
 .modal-show {

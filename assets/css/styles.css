@@ -151,6 +151,7 @@ body {
   }
 }
 
+.modal-corporate,
 .modal-blog,
 .modal-game,
 .modal-api,
@@ -228,6 +229,8 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   min-width: 22ch;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .modal-list i {
@@ -255,11 +258,20 @@ li:hover {
 }
 
 .modal-col {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-thumb {
   text-align: center;
   border-radius: 10px;
+}
+
+.modal-thumb-caption {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .modal-thumb img {
@@ -296,6 +308,10 @@ li:hover {
   box-shadow: 0px 2px 10px var(--white);
   border: 0px;
   transform: scale(1.1) translateY(-0.3rem);
+}
+
+.modal-link {
+  width: auto;
 }
 
 .hidden {

@@ -101,3 +101,16 @@ btnPort.addEventListener("click", function () {
 btnPortClose.addEventListener("click", function () {
   modalBlog.classList.remove("modal-show");
 });
+
+var modalCorporate = document.getElementsByClassName("modal-corporate")[0];
+var btnCorp = document.getElementById("btn-corporate");
+var btnCorpClose = document.getElementById("close-corporate");
+
+btnCorp.addEventListener("click", function () {
+  modalCorporate.classList.toggle("modal-show");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+btnCorpClose.addEventListener("click", function () {
+  modalCorporate.classList.remove("modal-show");
+});

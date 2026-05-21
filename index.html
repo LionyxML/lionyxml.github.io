@@ -4,588 +4,425 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- BOXICONS (Menu Icon) -->
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Rahul M. Juliato — selected web development projects."
     />
 
-    <!-- Roboto Font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
-    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Rahul M. Juliato portfolio Page</title>
+    <title>Rahul M. Juliato — Portfolio</title>
   </head>
 
   <body>
-    <!-- MAIN -->
-    <div class="container">
-      <div class="welcome">
-        <img
-          src="https://avatars.githubusercontent.com/u/16169950?s=100&v=4"
-          alt="a photo of me!"
-        />
-        <div class="row">
-          <a href="https://github.com/lionyxml" target="_blank"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://www.rahuljuliato.com" target="_blank"
-            ><i class="bx bx-globe"></i
-          ></a>
+    <div class="bg-orb bg-orb--a"></div>
+    <div class="bg-orb bg-orb--b"></div>
+    <div class="bg-orb bg-orb--c"></div>
+
+    <main class="container">
+      <header class="hero">
+        <div class="avatar">
+          <img
+            src="https://avatars.githubusercontent.com/u/16169950?s=200&v=4"
+            alt="Rahul M. Juliato"
+          />
         </div>
-      </div>
-      <div class="text">
-        Check out a selection of projects from my web development portfolio:
-      </div>
-      <div class="list">
-        <div class="btn" id="btn-corporate">Corporate Dashboard</div>
-        <div class="btn" id="btn-blog">Personal Blog</div>
-        <div class="btn" id="btn-game">Game of Life</div>
-        <div class="btn" id="btn-r-qr">QR Code Generator</div>
-        <div class="btn" id="btn-land">Landing Page</div>
-        <div class="btn" id="btn-api">API Query</div>
-        <div class="btn hidden" id="btn-landprof">Portfolio</div>
-        <div class="btn hidden" id="btn-micro">Microblog</div>
-        <div class="btn hidden" id="btn-dash">Dashboards</div>
-      </div>
-    </div>
+        <h1 class="hero__name">Rahul M. Juliato</h1>
+        <p class="hero__role">Software Engineer · Web Developer</p>
+
+        <div class="hero__socials">
+          <a
+            href="https://github.com/lionyxml"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+          <a
+            href="https://www.rahuljuliato.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Website"
+          >
+            <i class="bx bx-globe"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rahul-juliato/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="bx bxl-linkedin"></i>
+          </a>
+        </div>
+      </header>
+
+      <p class="intro">
+        A selection of projects from my web development portfolio.
+      </p>
+
+      <nav class="links" aria-label="Projects">
+        <button class="link-btn" data-modal="corporate" type="button">
+          <span class="link-btn__icon"><i class="bx bxs-dashboard"></i></span>
+          <span class="link-btn__label">Corporate Dashboard</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn" data-modal="blog" type="button">
+          <span class="link-btn__icon"><i class="bx bxs-edit-alt"></i></span>
+          <span class="link-btn__label">Personal Blog</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn" data-modal="game" type="button">
+          <span class="link-btn__icon"><i class="bx bxs-grid-alt"></i></span>
+          <span class="link-btn__label">Game of Life</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn" data-modal="qr" type="button">
+          <span class="link-btn__icon"><i class="bx bx-qr-scan"></i></span>
+          <span class="link-btn__label">QR Code Generator</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn" data-modal="land" type="button">
+          <span class="link-btn__icon"><i class="bx bxs-rocket"></i></span>
+          <span class="link-btn__label">Landing Page</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn" data-modal="api" type="button">
+          <span class="link-btn__icon"><i class="bx bx-planet"></i></span>
+          <span class="link-btn__label">API Query</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn hidden" data-modal="landprof" type="button">
+          <span class="link-btn__icon"><i class="bx bxs-user-detail"></i></span>
+          <span class="link-btn__label">Portfolio</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn hidden" data-modal="micro" type="button">
+          <span class="link-btn__icon"><i class="bx bxs-chat"></i></span>
+          <span class="link-btn__label">Microblog</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+        <button class="link-btn hidden" data-modal="dash" type="button">
+          <span class="link-btn__icon"><i class="bx bxs-pie-chart-alt-2"></i></span>
+          <span class="link-btn__label">Dashboards</span>
+          <span class="link-btn__arrow"><i class="bx bx-chevron-right"></i></span>
+        </button>
+      </nav>
+
+      <footer class="foot">
+        <p>© <span id="year"></span> Rahul M. Juliato</p>
+      </footer>
+    </main>
 
     <!-- Modals -->
-
-    <!-- Corporate Dashboard -->
-    <div class="modal-corporate">
-      <div class="modal-content">
-        <div class="modal-close" id="close-corporate">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Corporate Dashboard
-            <i class="bx bxs-category-alt"></i>
-            <div class="space"></div>
-            <div class="bar"></div>
-            A specialized corporate dashboard for validating and converting
-            company certificates.
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+    <div class="modal" id="modal-corporate" data-modal-id="corporate" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-corporate">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-corporate"><i class="bx bxs-dashboard"></i> Corporate Dashboard</h2>
+          <p>A specialized corporate dashboard for validating and converting company certificates.</p>
+        </header>
+        <div class="modal__body">
+          <a class="modal__thumb" href="https://cc-frontend-oev2.onrender.com/" target="_blank" rel="noopener">
+            <img src="./assets/img/corporate.png" alt="Corporate Dashboard preview" />
+            <span class="modal__thumb-caption">Create your own user to log in</span>
+          </a>
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Backend</h3>
               <ul>
-                Backend:
-                <li><i class="bx bxs-check-circle"></i>Node.JS</li>
-                <li><i class="bx bxs-check-circle"></i>Express</li>
-                <li><i class="bx bxs-check-circle"></i>JWT Auth</li>
-                <li><i class="bx bxs-check-circle"></i>Typescript</li>
-                <li><i class="bx bxs-check-circle"></i>Sequelize</li>
-                <li><i class="bx bxs-check-circle"></i>Swagger</li>
-                <li><i class="bx bxs-check-circle"></i>Docker</li>
-                <li><i class="bx bxs-check-circle"></i>Jest</li>
-                <li><i class="bx bxs-check-circle"></i>Winston</li>
+                <li>Node.js</li><li>Express</li><li>JWT Auth</li>
+                <li>TypeScript</li><li>Sequelize</li><li>Swagger</li>
+                <li>Docker</li><li>Jest</li><li>Winston</li>
               </ul>
+            </div>
+            <div class="stack-group">
+              <h3>Frontend</h3>
               <ul>
-                Frontend:
-                <li><i class="bx bxs-check-circle"></i>React</li>
-                <li><i class="bx bxs-check-circle"></i>StyledComponents</li>
-                <li><i class="bx bxs-check-circle"></i>Material</li>
-                <li><i class="bx bxs-check-circle"></i>Yup</li>
-                <li><i class="bx bxs-check-circle"></i>React Hook Form</li>
+                <li>React</li><li>styled-components</li><li>Material UI</li>
+                <li>Yup</li><li>React Hook Form</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <a href="https://cc-frontend-oev2.onrender.com/" target="_blank">
-              <img
-                src="./assets/img/corporate.png"
-                alt=""
-                height="180px"
-                width="180px"
-              />
-            </a>
-            <p class="modal-thumb-caption">(Create your own user to login!)</p>
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link modal-link-repo">
-            <a href="https://github.com/LionyxML/cc-api" target="_blank">
-              <i class="bx bxl-github"></i>
-              Backend Repo
-            </a>
-          </div>
-          <div class="modal-link modal-link-repo">
-            <a href="https://github.com/LionyxML/cc-frontend" target="_blank">
-              <i class="bx bxl-github"></i>
-              Frontend Repo
-            </a>
-          </div>
-          <div class="modal-link">
-            <a href="https://cc-frontend-oev2.onrender.com/" target="_blank">
-              <i class="bx bx-link-external"></i>
-              Check it out!
-            </a>
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--ghost" href="https://github.com/LionyxML/cc-api" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i> Backend
+          </a>
+          <a class="action action--ghost" href="https://github.com/LionyxML/cc-frontend" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i> Frontend
+          </a>
+          <a class="action action--primary" href="https://cc-frontend-oev2.onrender.com/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- Personal Blog -->
-    <div class="modal-blog">
-      <div class="modal-content">
-        <div class="modal-close" id="close-blog">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Rahul's Blog
-            <i class="bx bxs-category-alt"></i>
-            <div class="space"></div>
-            <div class="bar"></div>
-            My own personal blog, converting markdown files into posts, with rss
-            support.
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+    <div class="modal" id="modal-blog" data-modal-id="blog" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-blog">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-blog"><i class="bx bxs-edit-alt"></i> Rahul's Blog</h2>
+          <p>Personal blog converting markdown files into posts, with RSS support.</p>
+        </header>
+        <div class="modal__body">
+          <a class="modal__thumb" href="https://rahuljuliato.com/" target="_blank" rel="noopener">
+            <img src="./assets/img/blog.png" alt="Blog preview" />
+          </a>
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>Next.JS</li>
-                <li><i class="bx bxs-check-circle"></i>Pages Router</li>
-                <li><i class="bx bxs-check-circle"></i>React</li>
-                <li><i class="bx bxs-check-circle"></i>Tailwind</li>
-                <li>
-                  <i class="bx bxs-check-circle"></i>Code Sintax Highlight
-                </li>
-                <li><i class="bx bxs-check-circle"></i>SSR, SSG and ISR</li>
-                <li><i class="bx bxs-check-circle"></i>Prefetching</li>
-                <li><i class="bx bxs-check-circle"></i>Image Optimization</li>
+                <li>Next.js (Pages Router)</li><li>React</li><li>Tailwind</li>
+                <li>Code syntax highlight</li><li>SSR, SSG and ISR</li>
+                <li>Prefetching</li><li>Image optimization</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <a href="https://rahuljuliato.com/" target="_blank">
-              <img
-                src="./assets/img/blog.png"
-                alt=""
-                height="180px"
-                width="180px"
-              />
-            </a>
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link">
-            <a href="https://rahuljuliato.com/" target="_blank">
-              <i class="bx bx-link-external"></i>
-              Check it out!</a
-            >
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--primary" href="https://rahuljuliato.com/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- Game of Life -->
-    <div class="modal-game">
-      <div class="modal-content">
-        <div class="modal-close" id="close-game">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Game of Life
-            <i class="bx bxs-category-alt"></i>
-            <div class="space"></div>
-            <div class="bar"></div>
-            My own Cownway's Game of Life implementation in React
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+    <div class="modal" id="modal-game" data-modal-id="game" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-game">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-game"><i class="bx bxs-grid-alt"></i> Game of Life</h2>
+          <p>Conway's Game of Life implementation in React, with a spherical "plane" option.</p>
+        </header>
+        <div class="modal__body">
+          <a class="modal__thumb" href="https://lionyxml.github.io/react-game-of-life/" target="_blank" rel="noopener">
+            <img src="./assets/img/game.png" alt="Game of Life preview" />
+          </a>
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>React</li>
-                <li><i class="bx bxs-check-circle"></i>Vite</li>
-                <li><i class="bx bxs-check-circle"></i>Typescript</li>
-                <li><i class="bx bxs-check-circle"></i>ECharts</li>
-                <li><i class="bx bxs-check-circle"></i>RamdaJS</li>
-                <li>
-                  <i class="bx bxs-check-circle"></i>Spherical "plane" option
-                </li>
+                <li>React</li><li>Vite</li><li>TypeScript</li>
+                <li>ECharts</li><li>Ramda</li><li>Spherical plane mode</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <a
-              href="https://lionyxml.github.io/react-game-of-life/"
-              target="_blank"
-            >
-              <img
-                src="./assets/img/game.png"
-                alt=""
-                height="180px"
-                width="180px"
-              />
-            </a>
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link modal-link-repo">
-            <a
-              href="https://github.com/LionyxML/react-game-of-life"
-              target="_blank"
-            >
-              <i class="bx bxl-github"></i>
-              Repository
-            </a>
-          </div>
-          <div class="modal-link">
-            <a
-              href="https://lionyxml.github.io/react-game-of-life/"
-              target="_blank"
-            >
-              <i class="bx bx-link-external"></i>
-              Check it out!
-            </a>
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--ghost" href="https://github.com/LionyxML/react-game-of-life" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i> Repo
+          </a>
+          <a class="action action--primary" href="https://lionyxml.github.io/react-game-of-life/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- API Query -->
-    <div class="modal-api">
-      <div class="modal-content">
-        <div class="modal-close" id="close-api">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Star Wars API Client
-            <i class="bx bxs-category-alt"></i>
-            <div class="space"></div>
-            <div class="bar"></div>
-            Frontend project for querying the Star Wars API, searching for
-            characters names
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+    <div class="modal" id="modal-qr" data-modal-id="qr" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-qr">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-qr"><i class="bx bx-qr-scan"></i> QR-Code Generator</h2>
+          <p>Tool for generating QR codes with different sizes and colors.</p>
+        </header>
+        <div class="modal__body">
+          <a class="modal__thumb" href="https://lionyxml.github.io/r-qr/" target="_blank" rel="noopener">
+            <img src="./assets/img/r-qr.png" alt="QR generator preview" />
+          </a>
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>HTML5</li>
-                <li><i class="bx bxs-check-circle"></i>CSS3</li>
-                <li><i class="bx bxs-check-circle"></i>JS</li>
-                <li><i class="bx bxs-check-circle"></i>Ajax</li>
-                <li><i class="bx bxs-check-circle"></i>Responsive</li>
-                <li><i class="bx bxs-check-circle"></i>Translation</li>
-                <li><i class="bx bxs-check-circle"></i>3 output modes</li>
+                <li>React</li><li>Material UI</li>
+                <li>Responsive</li><li>Download output</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <a
-              href="https://lionyxml.github.io/r-swapi-client/src/"
-              target="_blank"
-            >
-              <img
-                src="./assets/img/swapi.png"
-                alt=""
-                height="180px"
-                width="180px"
-              />
-            </a>
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link modal-link-repo">
-            <a
-              href="https://github.com/LionyxML/r-swapi-client"
-              target="_blank"
-            >
-              <i class="bx bxl-github"></i>
-              Repository
-            </a>
-          </div>
-          <div class="modal-link">
-            <a
-              href="https://lionyxml.github.io/r-swapi-client/src/"
-              target="_blank"
-            >
-              <i class="bx bx-link-external"></i>
-              check it out!
-            </a>
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--ghost" href="https://github.com/LionyxML/r-qr" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i> Repo
+          </a>
+          <a class="action action--primary" href="https://lionyxml.github.io/r-qr/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- Product Landing -->
-    <div class="modal-land">
-      <div class="modal-content">
-        <div class="modal-close" id="close-land">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Landing Page
-            <i class="bx bxs-category-alt"></i>
-            <div class="space"></div>
-            <div class="bar"></div>
-            Showcasing a company/product on a single page
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+    <div class="modal" id="modal-land" data-modal-id="land" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-land">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-land"><i class="bx bxs-rocket"></i> Landing Page</h2>
+          <p>Showcasing a company/product on a single page.</p>
+        </header>
+        <div class="modal__body">
+          <a class="modal__thumb" href="https://lionyxml.github.io/landing-page-roscas/" target="_blank" rel="noopener">
+            <img src="./assets/img/land.png" alt="Landing page preview" />
+          </a>
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>HTML5</li>
-                <li><i class="bx bxs-check-circle"></i>CSS3</li>
-                <li><i class="bx bxs-check-circle"></i>JS</li>
-                <li><i class="bx bxs-check-circle"></i>Zenscroll</li>
-                <li><i class="bx bxs-check-circle"></i>GSAP</li>
-                <li><i class="bx bxs-check-circle"></i>Responsive</li>
+                <li>HTML5</li><li>CSS3</li><li>JS</li>
+                <li>Zenscroll</li><li>GSAP</li><li>Responsive</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <a
-              href="https://lionyxml.github.io/landing-page-roscas/"
-              target="_blank"
-            >
-              <img
-                src="./assets/img/land.png"
-                alt=""
-                height="180px"
-                width="180px"
-              />
-            </a>
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link modal-link-repo">
-            <a
-              href="https://github.com/LionyxML/landing-page-roscas"
-              target="_blank"
-            >
-              <i class="bx bxl-github"></i>
-              Repository
-            </a>
-          </div>
-          <div class="modal-link">
-            <a
-              href="https://lionyxml.github.io/landing-page-roscas/"
-              target="_blank"
-            >
-              <i class="bx bx-link-external"></i>
-              Check it out!
-            </a>
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--ghost" href="https://github.com/LionyxML/landing-page-roscas" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i> Repo
+          </a>
+          <a class="action action--primary" href="https://lionyxml.github.io/landing-page-roscas/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- Professional Portfolio -->
-    <div class="modal-landprof">
-      <div class="modal-content">
-        <div class="modal-close" id="close-landprof">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Responsive portfolio site for a professional developer
-            <i class="bx bxs-category-alt"></i>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+    <div class="modal" id="modal-api" data-modal-id="api" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-api">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-api"><i class="bx bx-planet"></i> Star Wars API Client</h2>
+          <p>Frontend project for querying the Star Wars API, searching character names.</p>
+        </header>
+        <div class="modal__body">
+          <a class="modal__thumb" href="https://lionyxml.github.io/r-swapi-client/src/" target="_blank" rel="noopener">
+            <img src="./assets/img/swapi.png" alt="SWAPI client preview" />
+          </a>
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>HTML5</li>
-                <li><i class="bx bxs-check-circle"></i>CSS3</li>
-                <li><i class="bx bxs-check-circle"></i>JS</li>
-                <li><i class="bx bxs-check-circle"></i>SASS</li>
-                <li><i class="bx bxs-check-circle"></i>Responsive</li>
+                <li>HTML5</li><li>CSS3</li><li>JS</li><li>Ajax</li>
+                <li>Responsive</li><li>Translation</li><li>3 output modes</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <img
-              src="./assets/img/landp.png"
-              alt=""
-              height="180px"
-              width="180px"
-            />
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link">
-            <a
-              href="https://lionyxml.github.io/frontend_sass_project/dist/"
-              target="_blank"
-            >
-              <i class="bx bx-link-external"></i>
-              Check it out!
-            </a>
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--ghost" href="https://github.com/LionyxML/r-swapi-client" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i> Repo
+          </a>
+          <a class="action action--primary" href="https://lionyxml.github.io/r-swapi-client/src/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- QR-Code Generator -->
-    <div class="modal-qr">
-      <div class="modal-content">
-        <div class="modal-close" id="close-qr">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            QR-Code Generator
-            <i class="bx bxs-category-alt"></i>
-            <div class="space"></div>
-            <div class="bar"></div>
-            Tool for generating QR Codes with diferent sizes and colors
-            <div class="bar"></div>
+    <div class="modal" id="modal-landprof" data-modal-id="landprof" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-landprof">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-landprof"><i class="bx bxs-user-detail"></i> Portfolio</h2>
+          <p>Responsive portfolio site for a professional developer.</p>
+        </header>
+        <div class="modal__body">
+          <div class="modal__thumb modal__thumb--static">
+            <img src="./assets/img/landp.png" alt="Portfolio preview" />
           </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>ReactJS</li>
-                <li><i class="bx bxs-check-circle"></i>Material UI</li>
-                <li><i class="bx bxs-check-circle"></i>Responsive</li>
-                <li><i class="bx bxs-check-circle"></i>Download Content</li>
+                <li>HTML5</li><li>CSS3</li><li>JS</li><li>SASS</li><li>Responsive</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <a href="https://lionyxml.github.io/r-qr/" target="_blank">
-              <img
-                src="./assets/img/r-qr.png"
-                alt=""
-                height="180px"
-                width="180px"
-              />
-            </a>
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link modal-link-repo">
-            <a href="https://github.com/LionyxML/r-qr" target="_blank">
-              <i class="bx bxl-github"></i>
-              Repository
-            </a>
-          </div>
-          <div class="modal-link">
-            <a href="https://lionyxml.github.io/r-qr/" target="_blank">
-              <i class="bx bx-link-external"></i>
-              Check it out!</a
-            >
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--primary" href="https://lionyxml.github.io/frontend_sass_project/dist/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- Microblog -->
-    <div class="modal-micro">
-      <div class="modal-content">
-        <div class="modal-close" id="close-micro">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Fully functional Backend+Frontend Microblog project (Twitter clone)
-            <i class="bx bxs-category-alt"></i>
-            <div class="bar"></div>
+    <div class="modal" id="modal-micro" data-modal-id="micro" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-micro">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-micro"><i class="bx bxs-chat"></i> Microblog</h2>
+          <p>Fully functional backend + frontend microblog (Twitter clone).</p>
+        </header>
+        <div class="modal__body">
+          <div class="modal__thumb modal__thumb--static">
+            <img src="./assets/img/micro.png" alt="Microblog preview" />
           </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>HTML5, CSS3, JS</li>
-                <li><i class="bx bxs-check-circle"></i>Bootstrap</li>
-                <li><i class="bx bxs-check-circle"></i>SQLAlchemy ORM</li>
-                <li><i class="bx bxs-check-circle"></i>SQL Lite</li>
-                <li><i class="bx bxs-check-circle"></i>Flask</li>
-                <li><i class="bx bxs-check-circle"></i>Python</li>
+                <li>HTML5, CSS3, JS</li><li>Bootstrap</li>
+                <li>SQLAlchemy ORM</li><li>SQLite</li><li>Flask</li><li>Python</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <img
-              src="./assets/img/micro.png"
-              alt=""
-              height="180px"
-              width="180px"
-            />
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link">
-            <a
-              href="https://github.com/lionyxml/flask_microblog_heroku"
-              target="_blank"
-            >
-              <i class="bx bx-link-external"></i>
-              Check it out!
-            </a>
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--primary" href="https://github.com/lionyxml/flask_microblog_heroku" target="_blank" rel="noopener">
+            <i class="bx bxl-github"></i> Repo
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- Dashboard -->
-    <div class="modal-dash">
-      <div class="modal-content">
-        <div class="modal-close" id="close-dash">&times</div>
-        <div class="modal-row">
-          <div class="modal-description">
-            <i class="bx bxs-category-alt"></i>
-            Dashboards project using charting libraries
-            <i class="bx bxs-category-alt"></i>
-            <div class="bar"></div>
+    <div class="modal" id="modal-dash" data-modal-id="dash" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <article class="modal__card" role="dialog" aria-modal="true" aria-labelledby="title-dash">
+        <button class="modal__close" data-modal-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <header class="modal__header">
+          <h2 id="title-dash"><i class="bx bxs-pie-chart-alt-2"></i> Dashboards</h2>
+          <p>Dashboards project using charting libraries.</p>
+        </header>
+        <div class="modal__body">
+          <div class="modal__thumb modal__thumb--static">
+            <img src="./assets/img/dash.png" alt="Dashboards preview" />
           </div>
-        </div>
-        <div class="modal-row">
-          <div class="modal-col">
-            <div class="modal-list">
+          <div class="modal__stack">
+            <div class="stack-group">
+              <h3>Stack</h3>
               <ul>
-                <li><i class="bx bxs-check-circle"></i>ReactJS</li>
-                <li><i class="bx bxs-check-circle"></i>Chart.js</li>
-                <li><i class="bx bxs-check-circle"></i>Data visualizations</li>
-                <li><i class="bx bxs-check-circle"></i>Responsive</li>
+                <li>React</li><li>Chart.js</li>
+                <li>Data visualizations</li><li>Responsive</li>
               </ul>
             </div>
           </div>
-          <div class="modal-thumb modal-col">
-            <img
-              src="./assets/img/dash.png"
-              alt=""
-              height="180px"
-              width="180px"
-            />
-          </div>
         </div>
-        <div class="modal-row">
-          <div class="modal-link">
-            <a href="https://lionyxml.github.io/r-dashboards/" target="_blank">
-              <i class="bx bx-link-external"></i>
-              Check it out!
-            </a>
-          </div>
-        </div>
-      </div>
+        <footer class="modal__actions">
+          <a class="action action--primary" href="https://lionyxml.github.io/r-dashboards/" target="_blank" rel="noopener">
+            <i class="bx bx-link-external"></i> Live
+          </a>
+        </footer>
+      </article>
     </div>
 
-    <!-- Plugin GSAP de Animação -->
-    <script src="./assets/js/gsap.min.js"></script>
-    <!-- Plugin Zenscroll  -->
-    <script src="./assets/js/zenscroll.js"></script>
-    <!-- JAVASCRIPT dessa aplicação -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
